@@ -1,0 +1,69 @@
+# These should be left as is thought world name can change
+worldpath=/world/
+world=/world/World.wld
+upnp=0
+
+
+# Standard terraria settings
+# Creates a new world if none is found. World size is specified by: 1(small), 2(medium), and 3(large).
+autocreate=3
+
+# Sets the world seed when using autocreate
+seed=AwesomeSeed
+
+# Sets world difficulty when using -autocreate. Options: 0(normal), 1(expert), 2(master), 3(journey)
+difficulty=0
+
+# Sets the max number of players allowed on a server. Value must be between 1 and 255
+maxplayers=8
+
+# Set the port number#
+port=7777
+
+# Set the server password
+password=p@55w0rd*
+
+# Set the message of the day
+motd=Please don’t cut the purple trees!
+
+# The location of the banlist. Defaults to "banlist.txt" in the working directory.
+banlist=banlist.txt
+
+# Adds additional cheat protection.
+secure=1
+
+# Sets the server language from its language code.
+# available codes:
+#    en/US = English
+#    de/DE = German
+#    it/IT = Italian
+#    fr/FR = French
+#    es/ES = Spanish
+#    ru/RU = Russian
+#    zh/Hans = Chinese
+#    pt/BR = Portuguese
+#    pl/PL = Polish
+language = en/US
+
+# Reduces enemy skipping but increases bandwidth usage. The lower the number the less skipping will happen, but more data is sent. 0 is off.
+npcstream=60
+
+# Default system priority 0:Realtime, 1:High, 2:AboveNormal, 3:Normal, 4:BelowNormal, 5:Idle
+priority=3
+
+# Journey mode power permissions for every individual power. 0: Locked for everyone, 1: Can only be changed by host, 2: Can be changed by everyone
+journeypermission_time_setfrozen=1
+journeypermission_time_setdawn=1
+journeypermission_time_setnoon=1
+journeypermission_time_setdusk=1
+journeypermission_time_setmidnight=1
+journeypermission_godmode=1
+journeypermission_wind_setstrength=1
+journeypermission_rain_setstrength=1
+journeypermission_time_setspeed=1
+journeypermission_rain_setfrozen=1
+journeypermission_wind_setfrozen=1
+journeypermission_increaseplacementrange=1
+journeypermission_setdifficulty=1
+journeypermission_biomespread_setfrozen=1
+journeypermission_setspawnrate=1
