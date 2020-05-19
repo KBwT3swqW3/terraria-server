@@ -38,6 +38,8 @@ RUN mkdir $INSTALL_PATH \
 
 COPY --from=builder $INSTALL_PATH $INSTALL_PATH
 
+RUN chown terraria:terraria -R $INSTALL_PATH
+
 VOLUME /world
 WORKDIR /server
 EXPOSE 7777

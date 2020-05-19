@@ -23,7 +23,7 @@ replace vim with your text editor of choice:
 
 > sudo vim /opt/terraria/my_world/serverconfig.txt  
 > sudo chown 30000:30000 -R /opt/terraria/my_world  
-> sudo chmod 0600 -R /opt/terraria/my_world
+> sudo chmod u+rwX,go-rwx -R /opt/terraria/my_world
 
 You can then run the container mounting in your new volume:
 
