@@ -13,7 +13,7 @@ RUN mkdir $INSTALL_PATH \
 USER terraria:terraria
 
 # Links at the bottom of terraria.org PC Server Version
-ENV TERRARIA_URL=https://terraria.org/system/dedicated_servers/archives/000/000/041/original/terraria-server-1411.zip
+ENV TERRARIA_URL=https://terraria.org/system/dedicated_servers/archives/000/000/042/original/terraria-server-1412.zip
 RUN wget -qO $INSTALL_PATH/terraria.zip $TERRARIA_URL \
   && cd $INSTALL_PATH \
   && unzip terraria.zip \
