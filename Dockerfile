@@ -1,6 +1,7 @@
 FROM alpine AS builder
 
 RUN apk add --update-cache \
+  libxml2-utils \
   unzip \
   wget
 
@@ -13,8 +14,12 @@ RUN mkdir $INSTALL_PATH \
 USER terraria:terraria
 
 # Links at the bottom of terraria.org PC Server Version
-ENV TERRARIA_URL=https://terraria.org/system/dedicated_servers/archives/000/000/042/original/terraria-server-1412.zip
-RUN wget -qO $INSTALL_PATH/terraria.zip $TERRARIA_URL \
+# ENV TERRARIA_URL=https://terraria.org/system/dedicated_servers/archives/000/000/042/original/terraria-server-1412.zip
+RUN wget -qO /tmp/terraria.html https://terraria.org/ \
+  && export LATEST_DL_PATH=$(xmllint --html --xpath '/html/body/div[contains(@class, "page-footer")]/a' /tmp/terraria.html 2>/dev/null | egrep -Eo '(\/system/dedicated_servers/.*?.zip)\?' | tr -d '?') \
+  && export TERRARIA_URL=$(echo https://terraria.org$LATEST_DL_PATH) \
+  && echo $TERRARIA_URL \
+  && wget -qO $INSTALL_PATH/terraria.zip $TERRARIA_URL \
   && cd $INSTALL_PATH \
   && unzip terraria.zip \
   && rm terraria.zip \
